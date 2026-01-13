@@ -1,0 +1,75 @@
+.main-header{
+	display: flex;
+	background-color: #5e9799;
+}
+
+.main-header a{
+	color: #FFF;
+	text-decoration: none;
+}
+
+.top-main{
+background-image: url(/img/top.png);
+background-repeat: no-repeat;
+background-position: center center; /* 中央寄せ */
+background-size: cover; /* 画面にフィットして切れないように拡大縮小 */
+width: 100vw;
+height: 100vh;
+padding-top: 300px;
+}
+
+.top-message{
+	color: #FFF;
+	text-align: center;
+}
+
+
+
+.top-message h1{
+	font-size: 40px;
+	margin-bottom: 30px
+}
+
+.header-item{
+	padding: 20px;
+}
+
+.header-logo{
+	margin-right: auto;
+}
+
+/* --- スマートフォン向けの表示崩れ対策 --- */
+@media screen and (max-width: 768px) {
+    /* 固定の余白や高さを解除して画面幅に合わせる */
+    .post-item2, .post-wrapper, .post-item, .container, .main, .main2 {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 95% !important; /* 画面の95%を使う */
+        padding: 20px !important;
+        height: auto !important; /* 高さを固定せず中身に合わせる */
+    }
+
+    /* ヘッダーを縦に並べて文字被りを防ぐ */
+    .main-header {
+        flex-direction: column;
+        height: auto !important;
+        padding: 10px 0;
+    }
+
+    /* 1文字ずつになるのを防ぐため、flexを解除する */
+    
+    /* 画像を横いっぱいに表示 */
+    
+
+    /* タイトルの文字サイズをスマホ用に小さくする */
+    h1, .form-mode, .form-mode2 {
+        font-size: 28px !important;
+        margin: 20px 0 !important;
+    }
+    
+    /* 入力欄が細くなるのを防ぐ */
+    input, textarea {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+}
